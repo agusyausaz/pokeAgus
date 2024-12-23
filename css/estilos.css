@@ -1,0 +1,597 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Playfair+Display:wght@400;700&family=Roboto:wght@400;500;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+ul{
+    list-style: none;
+}
+
+/* HEADER */
+header {
+    background-color: #ffcc00;
+    padding: 10px 20px;
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    position: relative; 
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    gap: 15px; 
+}
+
+.logo {
+    max-width: 250px;
+}
+
+.pikachu1{
+    max-width: 80px;    
+    transform: scaleX(-1);
+}
+
+.pikachu2{
+    max-width: 80px;
+
+}
+
+.navegador {
+    margin-top: 10px;
+    font-size: 1.2rem;
+}
+
+nav ul {
+    display: flex;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+    list-style: none; 
+}
+
+nav ul li a {
+    font-weight: 600;
+    text-decoration: none;
+    color: #333;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #0056b3; 
+}
+
+.carrito-container {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+}
+
+.icon-carrito {
+    max-width: 50px;
+    cursor: pointer;
+    filter: brightness(10%);
+}
+
+/* bienvenida */
+
+.seccion-bienvenida{
+    background: linear-gradient(135deg, #ffcc00, #ff9900);
+    color:white;
+    text-align: center;
+    padding: 20px;
+    font: 1.6rem;
+    font-weight: 600;
+}
+
+/* BUSCADOR */
+
+.search-container {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+    margin:20px auto;
+    text-align: center;
+}
+
+.search-input {
+    width: 100%;
+    padding: 10px;
+    padding-right: 40px;
+    border: 2px solid #ccc;
+    border-radius: 25px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+.search-button {
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 30px;
+    height: 30px;
+    border: none;
+    background: url('https://upload.wikimedia.org/wikipedia/commons/5/53/Pok%C3%A9_Ball_icon.svg') no-repeat center center;
+    background-size: cover;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.search-button:hover {
+    transform: translateY(-50%) rotate(360deg);
+}
+
+/* DESTACADOS // POKEMON */
+
+.destacados{
+    text-align: center;
+    padding: 30px 0;
+    background-color: #f3f4f6;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.destacados h2{
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+
+.pokemon-list {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); 
+    gap: 20px; 
+    justify-items: center; 
+    margin-bottom: 20px;
+    padding: 0 20px; 
+}
+
+
+.pokemon-card {
+    width: 180px; 
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.pokemon-card:hover{
+    transform: translateY(-5px);
+}
+
+.pokemon-card img{
+    max-width: 100px;
+    margin-bottom: 10px;
+}
+
+.pokemon-number {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px; 
+}
+
+.pokemon-name{
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+.pokemon-types{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.pokemon-stats{
+    font-size: 1rem;
+    color: #333;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.tipo-imagen{
+    width: 65px;
+    height: 65px;
+    object-fit: contain;
+}
+
+.btn-container{
+    margin-top: 30px;
+}
+
+.btn-prod{
+    display: inline-block;
+    background-color: #3b82f6;
+    color: white;
+    padding: 12px 25px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 5px;
+    text-decoration: none;
+    text-align: center;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-prod:hover{
+    background-color: #2563eb;
+    transform: translateY(-3px);
+}
+
+
+/* PRODUCTOS */
+
+
+.paginacion {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.boton-pagina {
+    margin: 0 5px;
+    padding: 5px 10px;
+    background-color: #6200ea;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.boton-pagina:hover {
+    background-color: #3700b3;
+}
+
+.btn-add-carrito {
+    display: inline-block;
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    text-decoration: none;
+    text-align: center;
+    margin-top: 10px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-add-carrito:hover {
+    background-color: #45a049;
+    transform: translateY(-3px);
+}
+
+
+
+/* TESTIMONIOS */
+
+.testimonios{
+    padding: 30px 20px;
+    background-color: white;
+    margin: 20px auto;
+    max-width: 1200px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.testimonios h2{
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.testimonios-container{
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.testimonio{
+    text-align: center;
+    max-width: 300px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.testimonio img{
+    max-width: 100px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.nombre-trainer{
+    font-weight: 700;
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+}
+
+.comentario{
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+/*FOOTER*/
+
+footer{
+    background-color: #333;
+    color: white;
+    padding: 20px;
+}
+
+.footer-container{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.footer-info{
+    text-align: center;
+    margin-top: 10px;
+}
+
+.icons-redes{
+    max-width: 30px;
+    margin: 0 5px;
+}
+
+/* NOSOTROS */
+
+.equipo{
+    text-align: center;
+    margin: 30px;
+}
+
+.equipo h2{
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.equipo p{
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+}
+
+.miembros{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.miembro{
+    text-align: center;
+    max-width: 200px;
+}
+
+.miembro-img{
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 100px;
+    border: 5px solid #ddd;
+    margin-bottom: 10px;
+}
+
+.miembro h3{
+    font-size: 1.3rem;
+    margin: 10px 0;
+}
+
+.miembro p{
+    font-size: 1rem;
+    color: #555;
+}
+
+/* CONTACTO */
+
+.contacto{
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.contacto h2{
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.contacto p{
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+}
+
+.form-contacto{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.form-contacto label{
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.form-contacto input, .form-contacto textarea {
+    padding: 10px;
+    font-size: 1rem;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.form-contacto input:focus, .form-contacto textarea:focus {
+    border-color: #f39c12;
+    outline: none;
+}
+
+.form-contacto button {
+    background-color: #f39c12;
+    color: white;
+    padding: 12px 20px;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.form-contacto button:hover {
+    background-color: #e67e22;
+}
+
+.informacion {
+    margin-top: 40px;
+    font-size: 1.2rem;
+}
+
+.informacion a {
+    color: #f39c12;
+    text-decoration: none;
+}
+
+.informacion a:hover {
+    text-decoration: underline;
+}
+
+
+@media (max-width: 768px) {
+    /* HEADER */
+    header {
+        padding: 10px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .logo-container {
+        gap: 10px;
+    }
+
+    .navegador {
+        font-size: 1.1rem;
+    }
+
+    .carrito-container {
+        top: 5px;
+        right: 10px;
+    }
+
+    /* Sección de bienvenida */
+    .seccion-bienvenida {
+        font-size: 1.4rem;
+    }
+
+    /* BUSCADOR */
+    .search-container {
+        max-width: 90%;
+        margin: 20px auto;
+    }
+
+    .search-input {
+        padding: 12px;
+    }
+
+    .search-button {
+        width: 35px;
+        height: 35px;
+    }
+
+    /* DESTACADOS // POKEMON */
+    .destacados h2 {
+        font-size: 1.8rem;
+    }
+
+    .pokemon-list {
+        grid-template-columns: repeat(3, 1fr);
+        padding: 0 10px;
+    }
+
+    .pokemon-card {
+        width: 150px;
+    }
+
+    /* TESTIMONIOS */
+    .testimonios-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* FOOTER */
+    footer {
+        padding: 20px;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* NOSOTROS */
+    .equipo h2 {
+        font-size: 1.8rem;
+    }
+
+    .miembros {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .miembro {
+        max-width: 100%;
+    }
+
+    .miembro-img {
+        width: 120px;
+        height: 120px;
+    }
+
+    /* CONTACTO */
+    .contacto {
+        padding: 30px 20px;
+    }
+
+    .form-contacto {
+        max-width: 100%;
+    }
+
+    .form-contacto label {
+        font-size: 1rem;
+    }
+
+    .form-contacto input, .form-contacto textarea {
+        font-size: 0.9rem;
+    }
+
+    .form-contacto button {
+        font-size: 1rem;
+    }
+}
+
+
